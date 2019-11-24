@@ -1,6 +1,5 @@
-import com.sun.tools.javac.util.List;
-
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Nasim Salmany
@@ -8,21 +7,21 @@ import java.util.ArrayList;
 public class Grid {
     private int length;
     private int width;
-    private List<Cell> cells;
+    private List<Cell> cells = new ArrayList<Cell>();
 
-    public Grid(int length, int width) {
+    Grid(int length, int width) {
         this.length = length;
         this.width = width;
+        init();
     }
 
-    public Grid init() {
+    private void init() {
         for (int i = 0; i < length; i++) {
             for (int j = 0; j < width; j++) {
                 Cell cell = new Cell(i, j);
                 this.cells.add(cell);
             }
         }
-        return this;
     }
 
     public int getLength() {

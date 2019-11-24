@@ -3,9 +3,11 @@
  */
 public class GameOfLife {
 
+    public static final int GRID_LENGTH = 10;
+    public static final int GRID_WIDTH = 10;
+
     public static Grid startGame() {
-        Grid grid = new Grid(10, 10);
-        grid = grid.init();
+        Grid grid = new Grid(GRID_LENGTH, GRID_WIDTH);
 
         return grid;
     }
